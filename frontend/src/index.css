@@ -1,0 +1,162 @@
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;1,700&family=Roboto:wght@300;400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* tailwind css apply */
+
+/* industry */
+.grid-2 {
+	@apply grid sm:grid-cols-1 lg:grid-cols-2 gap-6;
+}
+
+/* service */
+.grid-3 {
+	@apply grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-center;
+}
+
+/* location */
+.grid-4 {
+	@apply grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-center items-center;
+}
+
+.hover {
+	@apply hover:brightness-50 brightness-75 transition-all;
+}
+
+/* login */
+
+.flex-center {
+	@apply flex flex-col justify-center items-center;
+}
+
+:root {
+	--bigFont: 3rem;
+	--mediumFont: 2rem;
+	--smallFont: 1.5rem;
+	--smallestFont: 1rem;
+	--primaryColor: #7e1c8c;
+	--secondryColor: #f05b32;
+	--tertiaryColor: #3734d5;
+	--bgColor: #f3f0eb;
+	--whiteColor: #fff;
+	--blackColor: #000;
+	--grayColor: rgb(173, 171, 171);
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	text-decoration: none;
+	margin: 0;
+	outline: none;
+	font-family: "Roboto Condensed", sans-serif;
+	/* border: 1px solid red; */
+}
+
+h1 {
+	font-size: var(--bigFont);
+	font-weight: 700;
+}
+h2 {
+	font-size: var(--mediumFont);
+	font-weight: 500;
+}
+
+h3 {
+	font-size: var(--smallFont);
+	font-weight: 400;
+}
+
+p {
+	font-size: var(--smallestFont);
+	font-weight: 300;
+}
+
+/* CSS */
+.cta {
+	background-color: var(--primaryColor);
+	border: 0;
+	border-radius: 56px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue",
+		sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	outline: 0;
+	padding: 16px 21px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	transition: all 0.3s;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+}
+
+.cta:before {
+	background-color: initial;
+	background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+	border-radius: 125px;
+	content: "";
+	height: 50%;
+	left: 4%;
+	opacity: 0.5;
+	position: absolute;
+	top: 0;
+	transition: all 0.3s;
+	width: 92%;
+}
+
+.cta:hover {
+	box-shadow: rgba(255, 255, 255, 0.2) 0 3px 15px inset, rgba(0, 0, 0, 0.1) 0 3px 5px,
+		rgba(0, 0, 0, 0.1) 0 10px 13px;
+	transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+	.cta {
+		padding: 16px 48px;
+	}
+}
+
+.center {
+	padding: 2rem;
+	text-align: center;
+}
+main {
+	max-width: 920px;
+	margin: auto;
+}
+
+section {
+	animation: aos 0.5s linear;
+}
+
+@keyframes aos {
+	from {
+		opacity: 0;
+		transform: translate(0, 10px);
+	}
+	to {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	h1 {
+		font-size: var(--mediumFont);
+	}
+	h2 {
+		font-size: var(--smallFont);
+	}
+
+	main {
+		padding: 0 6%;
+	}
+}
